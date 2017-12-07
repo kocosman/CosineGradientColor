@@ -94,7 +94,7 @@ public class CosGrad {
   }
 
   float calculateCosGrad(float param) {
-    float c = amplitude * cos(frequency * param + phase);
+    float c = amplitude * cos(frequency * param + phase*TWO_PI);
     return 255*pow(constrain(c + bias, 0, 1), 2.2);
   }
 }

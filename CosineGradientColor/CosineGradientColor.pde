@@ -96,7 +96,7 @@ public class CosGrad {
       .setValue(phase)
       .setPosition(location.x+10, location.y+130)
       .setSize(100, 20)
-      .setRange(0., 1.);
+      .setRange(0., TWO_PI);
   }
 
   void update() {

@@ -1,13 +1,6 @@
 
 import controlP5.*;
 
-ControlP5 cp5;
-
-float redBias;
-float redAmplitude;
-float redFrequency;
-float redPhase;
-
 CosGrad red, green, blue;
 PGraphics palette;
 void setup() {

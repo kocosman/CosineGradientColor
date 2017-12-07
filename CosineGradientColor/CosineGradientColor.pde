@@ -58,29 +58,42 @@ public class CosGrad {
   float phase;
 
   CosGrad(PApplet _papplet, PVector _location) {
+    this(_papplet, _location, 0f, 0f, 0f, 0f);
+  }
+
+  CosGrad(PApplet _papplet, PVector _location, float _bias, float _amplitude, float _frequency, float _phase) {
     papplet = _papplet;
     location = _location;
+    bias = _bias;
+    amplitude = _amplitude;
+    frequency = _frequency;
+    phase = _phase;
+
     cp5 = new ControlP5(papplet);
     cp5.addSlider("bias")
       .plugTo(bias)
+      .setValue(bias)
       .setPosition(location.x+10, location.y+40)
       .setSize(100, 20)
       .setRange(0., 1.);
 
     cp5.addSlider("amplitude")    
       .plugTo(amplitude)
+      .setValue(amplitude)
       .setPosition(location.x+10, location.y+70)
       .setSize(100, 20)
       .setRange(0., 1.);
 
     cp5.addSlider("frequency")    
       .plugTo(frequency)
+      .setValue(frequency)
       .setPosition(location.x+10, location.y+100)
       .setSize(100, 20)
       .setRange(0., 3.);
 
     cp5.addSlider("phase")    
       .plugTo(phase)
+      .setValue(phase)
       .setPosition(location.x+10, location.y+130)
       .setSize(100, 20)
       .setRange(0., 1.);

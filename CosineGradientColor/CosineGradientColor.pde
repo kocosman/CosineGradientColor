@@ -31,7 +31,7 @@ void draw() {
   }
   palette.endDraw();
 
-  image(palette,0,height/2);
+  image(palette, 0, height/2);
 
   noStroke();
   fill(255);
@@ -41,10 +41,28 @@ void draw() {
   text("Blue", blue.location.x+10, blue.location.y+30);
 }
 
+void randomize() {
+  red.cp5.getController("bias").setValue(random(red.cp5.getController("bias").getMin(), red.cp5.getController("bias").getMax()));
+  red.cp5.getController("amplitude").setValue(random(red.cp5.getController("amplitude").getMin(), red.cp5.getController("amplitude").getMax()));
+  red.cp5.getController("frequency").setValue(random(red.cp5.getController("frequency").getMin(), red.cp5.getController("frequency").getMax()));
+  red.cp5.getController("phase").setValue(random(red.cp5.getController("phase").getMin(), red.cp5.getController("phase").getMax()));
 
-void keyPressed(){
-  if(key == 's'){
+  green.cp5.getController("bias").setValue(random(red.cp5.getController("bias").getMin(), red.cp5.getController("bias").getMax()));
+  green.cp5.getController("amplitude").setValue(random(red.cp5.getController("amplitude").getMin(), red.cp5.getController("amplitude").getMax()));
+  green.cp5.getController("frequency").setValue(random(red.cp5.getController("frequency").getMin(), red.cp5.getController("frequency").getMax()));
+  green.cp5.getController("phase").setValue(random(red.cp5.getController("phase").getMin(), red.cp5.getController("phase").getMax()));
+
+  blue.cp5.getController("bias").setValue(random(red.cp5.getController("bias").getMin(), red.cp5.getController("bias").getMax()));
+  blue.cp5.getController("amplitude").setValue(random(red.cp5.getController("amplitude").getMin(), red.cp5.getController("amplitude").getMax()));
+  blue.cp5.getController("frequency").setValue(random(red.cp5.getController("frequency").getMin(), red.cp5.getController("frequency").getMax()));
+  blue.cp5.getController("phase").setValue(random(red.cp5.getController("phase").getMin(), red.cp5.getController("phase").getMax()));
+}
+
+void keyPressed() {
+  if (key == 's') {
     palette.save("palette.jpg");
+  } else if (key == 'r') {
+    randomize();
   }
 }
 

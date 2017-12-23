@@ -24,6 +24,8 @@ void setup() {
   cp5.addBang("Randomize")
     .setPosition(width-80, 110)
     .setSize(30, 30);
+
+  gradColor.randomize();
 }
 
 void draw() {

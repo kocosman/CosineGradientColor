@@ -56,7 +56,7 @@ void SaveImage() {
   paletteName = "Red_"+gradColor.red.bias+"_"+gradColor.red.amplitude+"_"+gradColor.red.frequency+"_"+gradColor.red.phase+"-"
     +"Green_"+gradColor.green.bias+"_"+gradColor.green.amplitude+"_"+gradColor.green.frequency+"_"+gradColor.green.phase+"-"
     +"Blue_"+gradColor.blue.bias+"_"+gradColor.blue.amplitude+"_"+gradColor.blue.frequency+"_"+gradColor.blue.phase;
-  palette.save(paletteName+".jpg");
+  palette.save(paletteName+".png");
 }
 
 void Randomize() {
